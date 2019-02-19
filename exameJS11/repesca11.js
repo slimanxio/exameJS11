@@ -39,9 +39,9 @@
         /*A continuacion se crea una variable con el resultado correcto que sale de la suma de los 
         dos numeros aleatorios*/
 
-      var resultado1 = (num1 + num2);
-      var resultado2 = (num3 + num4);
-      var resultado3 = (num5 + num6);
+      var resultado1 = (parseInt(num1) + parseInt(num2));
+      var resultado2 = (parseInt(num3) + parseInt(num4));
+      var resultado3 = (parseInt(num5) + parseInt(num6));
 
       /*En la siguiente funcion se pretende crear variables con las respuestas proporcionadas por
       el usuario*/
@@ -54,26 +54,42 @@
       }
 
       /*Los siguientes if pretenden comparar la respuesta del usuario con la respuesta correcta para
-      decir al usuario si el resultado es correcto o no.*/
+      decir al usuario si el resultado es correcto o no y le suma 10 puntos.*/
 
       if (resultado1 == respuesta1) {
 
         alert("Correcto! Ganas 10 puntos");
+        var puntos1 = parseInt(10);
 
       }else{alert("Mal! No ganas puntos")}
 
       if (resultado2 == respuesta2) {
         
         alert("Correcto! Ganas 10 puntos");
+        var puntos2 = parseInt(10);
 
       }else{alert("Mal! No ganas puntos")}
 
       if (resultado3 == respuesta3) {
         
         alert("Correcto! Ganas 10 puntos");
+        var puntos3 = parseInt(10);
 
       }else{alert("Mal! No ganas puntos")}
 
+      /*A continuacion tenemos una nueva variable que se ocupa de sumar todos nuestros puntos y despues una 
+      alerta que nos mostrara el total*/
+
+      var totalpuntos = (puntos1 + puntos2 + puntos3)
+
+      alert("Tienes un total de: " + totalpuntos)
+
+      /*Esto siguiente se ocupa de recargar la pagina pulsando un boton*/
+
+      function pulsa () {
+      document.location.reload();}
+      document.write('<br>');
+      document.write('<button onclick="pulsa()">'+'Reinicia la página si quieres'+' </button>');
 
     break;
     
@@ -88,9 +104,9 @@
       document.write( num5 + " x " + num6 + " = " + "<input type='text' id='respuesta3'>");
         document.write("<input type='button' name='Enviar datos' value='Enviar' onclick='recibir();'/><br><br>")
       
-      var resultado1 = (num1 * num2);
-      var resultado2 = (num3 * num4);
-      var resultado3 = (num5 * num6);
+      var resultado1 = (parseInt(num1) * parseInt(num2));
+      var resultado2 = (parseInt(num3) * parseInt(num4));
+      var resultado3 = (parseInt(num5) * parseInt(num6));
 
       function recibir() {
         var respuesta1 = document.getElementById("respuesta1").value;
@@ -102,21 +118,32 @@
       if (resultado1 == respuesta1) {
 
         alert("Correcto! Ganas 10 puntos");
+        var puntos1 = parseInt(10);
 
       }else{alert("Mal! No ganas puntos")}
 
       if (resultado2 == respuesta2) {
         
         alert("Correcto! Ganas 10 puntos");
+        var puntos2 = parseInt(10);
 
       }else{alert("Mal! No ganas puntos")}
 
       if (resultado3 == respuesta3) {
         
         alert("Correcto! Ganas 10 puntos");
+        var puntos3 = parseInt(10);
 
       }else{alert("Mal! No ganas puntos")}
 
+      var totalpuntos = (puntos1 + puntos2 + puntos3)
+
+      alert("Tienes un total de: " + totalpuntos)
+
+      function pulsa () {
+      document.location.reload();}
+      document.write('<br>');
+      document.write('<button onclick="pulsa()">'+'Reinicia la página si quieres'+' </button>');
 
     break;
 
@@ -124,6 +151,6 @@
     el siguiente mensaje en pantalla*/
 
     default:
-      document.write("Sumar o multiplicar!!");
+      document.write("Sumar o multiplicar, no hay mas opciones!!");
     break;
   }
