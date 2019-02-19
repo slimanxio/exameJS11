@@ -1,0 +1,22 @@
+body {
+  background-color: lightblue;
+}
+
+h1{
+	color:orange;
+	margin-top: 1.5em;
+}
+
+h4{
+	color: darkblue;
+}
+
+body{
+	margin: 3cm;
+	font-family: sans-serif;
+}
+
+
+code{
+	font-size: 1.5em;
+}
